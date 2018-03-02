@@ -6,22 +6,22 @@ function PSDWebsitesArticle({classes, page, paragraph, paragraph2}) {
     const small = window.matchMedia('(max-width: 640px)').matches;
 
     return (
-        <article className={classes.article}>
-            <section className={classes.section}>
-                <h2 className={classes.section__title}>{page}</h2>
-                <div className={classes.section__content}>
-                    <p className={classes.section__p}>{paragraph}</p>
-                    <p className={classes.section__p}>{paragraph2}</p>
+        <section className={classes.section}>
+            <article className={classes.article}>
+                <h2 className={classes.article__title}>{page}</h2>
+                <div className={classes.article__content}>
+                    <p className={classes.article__p}>{paragraph}</p>
+                    <p className={classes.article__p}>{paragraph2}</p>
                     {small ? null :
-                        (<Fragment> <p className={classes.section__p}>{paragraph}</p><p className={classes.section__p}>{paragraph2}</p></Fragment>)}
+                        (<Fragment> <p className={classes.article__p}>{paragraph}</p><p className={classes.article__p}>{paragraph2}</p></Fragment>)}
                 </div>
-            </section>
-        </article>
+            </article>
+        </section>
     );
 }
 
 const styles = {
-    article: {
+    section: {
         background: 'rgb(235, 235, 235)',
         paddingLeft: '10vw',
         paddingRight: '8vw',
@@ -31,7 +31,7 @@ const styles = {
             paddingRight: '8vw',
         },
     },
-    section: {
+    article: {
         margin: 'auto',
         padding: "30px 0 0",
         textAlign: 'left',
@@ -43,7 +43,7 @@ const styles = {
         },
 
     },
-    section__title: {
+    article__title: {
         paddingBottom: '30px',
         color: 'rgb(8, 140, 165)',
         fontSize: '3rem',
@@ -52,14 +52,14 @@ const styles = {
             fontSize: '4.7rem',
         },
     },
-    section__content: {
+    article__content: {
         columnCount: '1',
         '@media (min-width: 640px)': {
             columnCount: '2',
             columnGap: '55px',
         }
     },
-    section__p: {
+    article__p: {
         margin: '0 0 45px',
         color: 'rgb(81, 81, 81)',
         fontSize: '2.2rem',

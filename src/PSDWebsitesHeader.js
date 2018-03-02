@@ -7,15 +7,15 @@ import Arrow from './ArrowT';
 function PSDWebsitesHeader({classes, title, page})  {
 
     return (
-        <header className={classes.header}>
-            <div className={classes.content}>
+        <section className={classes.header}>
+            <header className={classes.content}>
                 <h1 className={classes.h1}>{title}</h1>
                 <h2>
                     <Link to="/" className={classes.link}>www.{page}</Link>
                 </h2>
                 <Arrow/>
-            </div>
-        </header>
+            </header>
+        </section>
     );
 }
 

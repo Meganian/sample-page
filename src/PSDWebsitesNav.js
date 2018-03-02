@@ -27,7 +27,7 @@ class PSDWebsitesNav extends Component {
             <header className={`${classes.header} ${this.state.mobileMenu? classes.mobileOpen : ""}`} >
                 <nav className={classes.nav}>
                     <MediaQuery query="(min-device-width: 641px)">
-                        <ul className={classes.desktopMenu}>
+                        <ul>
                             <li className={classes.li}>
                                 <Link to="/">PSD Websites</Link>
                             </li>

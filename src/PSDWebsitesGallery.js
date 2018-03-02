@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import injectSheet from "react-jss";
 import Arrow from './ArrowT';
@@ -36,18 +36,16 @@ class PSDWebsitesGallery extends Component {
         const small = window.matchMedia('(max-width: 640px)').matches;
 
         return (
-            <Fragment>
+            <section className={classes.slider}>
+                 <Arrow slider='slider' size={true} onClick={this.nextSlide}/>
+                 <Carousel dragging={true} slidesToShow={parseFloat(`${small ? 2 : 3 }`)} vertical={small}>
+                     {this.state.slides2.map((slide, index) =>
+                     <Slide key={index} background={`${small ? slide.background_sm : slide.background }`} text={slide.text}
+                         active={index === this.state.activeSlide} link={slide.link}/>
+                )}
+                 </Carousel>
+            </section>
 
-                <div className={classes.slider}>
-                    <Arrow slider='slider' size={true} onClick={this.nextSlide}/>
-                    <Carousel dragging={true} slidesToShow={parseFloat(`${small ? 2 : 3 }`)} vertical={small}>
-                        {this.state.slides2.map((slide, index) =>
-                            <Slide key={index} background={`${small ? slide.background_sm : slide.background }`} text={slide.text}
-                                   active={index === this.state.activeSlide} link={slide.link}/>
-                        )}
-                    </Carousel>
-                </div>
-            </Fragment>
         )
     }
 }
