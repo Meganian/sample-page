@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import injectSheet from "react-jss";
 
 function PSDWebsitesArticle({classes, page, paragraph, paragraph2}) {
-    const small = window.matchMedia('(max-width: 640px)').matches;
+    const small = window.matchMedia('all and (max-width: 640px)').matches;
 
     return (
         <section className={classes.section}>

@@ -33,7 +33,7 @@ class PSDWebsitesGallery extends Component {
     render()
     {
         const {classes} = this.props;
-        const small = window.matchMedia('(max-width: 640px)').matches;
+        const small = window.matchMedia('all and (max-width: 640px)').matches;
 
         return (
             <section className={classes.slider}>
@@ -52,11 +52,11 @@ class PSDWebsitesGallery extends Component {
 
 const styles = {
     slider: {
-        width: '100vw',
+        width: '100%',
         height: '255vw',
         position: 'relative',
         background: 'rgb(91, 15, 161)',
-        display: 'grid',
+        //display: 'inline',
         gridTemplateColumns: '1fr',
         '@media (min-width: 641px)': {
             display: 'block',

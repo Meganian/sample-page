@@ -9,11 +9,14 @@ import About from './About';
 import Blog from './Blog';
 
 class App extends Component {
+
+
   render() {
+
     return (
       <Router>
         <Fragment>
-          <Nav/>
+          <Nav />
 
           <Route exact path="/" component={PSDWebsites} />
           <Route path="/uikits" component={UIKits} />

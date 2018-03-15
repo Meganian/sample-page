@@ -100,9 +100,21 @@ h2 {
 .slider {
     height: 200vw!important;
 }
-
-
-
+.ArrowT-slider-0-1-15:hover .ArrowT-svg-0-1-17 {
+  animation: arrowAnim 2.5s cubic-bezier(.2,1,.3,1) infinite;
+  transition: all 1s cubic-bezier(.2,1,.3,1);
+  fill: '#FF4136';
+}
+@keyframes arrowFixedAnim {
+  5% { opacity: 0}
+  20% {opacity: 0.4}
+  100% {opacity: 1}
+}
+@keyframes arrowAnim {
+0% {transform: translateX(0); opacity: 1}
+5% {transform: translateX(-0.1rem)}
+100% {transform: translateX(4rem); opacity: 0}
+}
 
 
 

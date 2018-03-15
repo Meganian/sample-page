@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import injectSheet from "react-jss";
 import Hamburger from './Hamburger';
-import MediaQuery from 'react-responsive';
+import MediaQuery from './MediaQuery';
 
 class PSDWebsitesNav extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ class PSDWebsitesNav extends Component {
         return (
             <header className={`${classes.header} ${this.state.mobileMenu? classes.mobileOpen : ""}`} >
                 <nav className={classes.nav}>
-                    <MediaQuery query="(min-device-width: 641px)">
+                    <MediaQuery query="all and (min-width: 641px)">
                         <ul>
                             <li className={classes.li}>
                                 <Link to="/">PSD Websites</Link>
@@ -46,7 +46,7 @@ class PSDWebsitesNav extends Component {
                         </ul>
                     </MediaQuery>
 
-                    <MediaQuery query="(max-device-width: 640px)">
+                    <MediaQuery query='(max-width: 640px)'>
                         <div className={classes.mobileNavHeader}>Navigation</div>
                         <div className={classes.mobileNav}>
                             <Hamburger active={this.state.mobileMenu} toggle={(e)=> this.handleToggle(e)}/>
@@ -82,6 +82,7 @@ const styles = {
         textAlign: 'left',
         position: 'relative',
         overflow: 'hidden',
+        zIndex: 10,
         '@media (min-width: 441px)': {
             height: '12vw',
         }
@@ -91,7 +92,8 @@ const styles = {
     },
     nav: {
         position: 'absolute',
-        width: '100vw',
+        //width: '100vw',
+        width: '100%',
         top: '50%',
         padding: '0 3.5vw',
         transform: 'translateY(-50%)',

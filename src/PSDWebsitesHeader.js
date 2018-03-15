@@ -10,10 +10,10 @@ function PSDWebsitesHeader({classes, title, page})  {
         <section className={classes.header}>
             <header className={classes.content}>
                 <h1 className={classes.h1}>{title}</h1>
-                <h2>
+                <h2 className={classes.h2}>
                     <Link to="/" className={classes.link}>www.{page}</Link>
                 </h2>
-                <Arrow/>
+                <div className={classes.arrow}><Arrow/></div>
             </header>
         </section>
     );
@@ -21,7 +21,7 @@ function PSDWebsitesHeader({classes, title, page})  {
 
 const styles = {
     header: {
-        width: '100vw',
+        //width: '100vw',
         height: '56vw',
         paddingLeft: '8vw',
         paddingRight: '8vw',
@@ -40,25 +40,35 @@ const styles = {
     },
     h1: {
         marginBottom: '7vw',
+        gridColumn: '1',
+        gridColumnSpan: '2',
         gridColumn: '1/-1',
         color: 'white',
         fontWeight: '100',
-        '@media (min-width: 1900px)': {
+        '@media all and (min-width: 1900px)': {
             marginBottom: '150px',
             fontSize: '4.5rem',
         }
+    },
+    h2: {
+        gridRow: '2',
     },
     link: {
         opacity: '0.7',
         textTransform: 'none',
         fontSize: '2rem',
         fontWeight: '100',
-        '@media (min-width: 440px)': {
+        '@media all and (min-width: 440px)': {
             fontSize: '3rem',
         },
         '&:hover': {
             opacity: 1
         }
+    },
+    arrow: {
+        gridColumnSpan: '1',
+        gridRow: '2',
+        gridColumn: '2'
     }
 };
 

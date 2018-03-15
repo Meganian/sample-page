@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jss": "^9.8.0",
+    "jss-preset-default": "^4.3.0",
     "nuka-carousel": "^3.0.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",

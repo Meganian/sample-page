@@ -41,21 +41,23 @@ const styles = {
     svg1:{
         position: 'absolute',
         width: '4vw',
-        height: 'auto',
+       // height: 'auto',
         cursor: 'pointer',
         overflow: 'visible',
         '@media (min-width: 800px)': {
-            width: '60px'
+            //width: '60px',
+            //height: '50px'
         }
     },
     svg: {
         position: 'absolute',
         width: '4vw',
-        height: 'auto',
+       // height: 'auto',
         cursor: 'pointer',
         overflow: 'visible',
         '@media (min-width: 800px)': {
-            width: '60px'
+            //width: '60px',
+            //height: '50px'
         },
         '&:hover': {
             extend: 'arrow2',
@@ -67,9 +69,9 @@ const styles = {
         },
     },
     large: {
-        width: '10vw',
+        width: '4vw',
         '@media (min-width: 800px)': {
-            width: '60px'
+            height: '60px'
         },
     },
     arrow2: {

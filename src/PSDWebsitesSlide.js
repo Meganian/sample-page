@@ -17,7 +17,7 @@ function Slide ({classes, background, active}) {
 const styles = {
     slide: {
         transition: 'all .4s ease-in-out',
-        width: '100%',
+        width: '100vw',
         height: '85vw',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -29,11 +29,10 @@ const styles = {
             padding: '0',
             opacity: '1',
             position: 'relative',
-            top: '-20px',
+           // top: '-20px',
             display: 'inline-block',
             verticalAlign: 'top',
             whiteSpace: 'normal',
-
         }
     },
     active:{

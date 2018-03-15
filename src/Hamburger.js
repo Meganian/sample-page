@@ -12,6 +12,7 @@ function Hamburger({classes, toggle, active})  {
     );
 }
 
+
 const styles = {
     hamburgerMenu: {
         display: 'inline-block',
@@ -71,6 +72,8 @@ const styles = {
 
     },
 };
+
+
 
 Hamburger.propTypes = {
     toggle: PropTypes.func.isRequired,
